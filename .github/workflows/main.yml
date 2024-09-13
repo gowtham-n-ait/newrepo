@@ -20,8 +20,9 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           instance-ids: ${{ secrets.INSTANCE_ID }}
-          aws-region: ap-south-1
+          aws-region: us-east-1
           commands: |
             sudo -i
-            cd /home/ubuntu/target/newrepo
+            sudo su - ubuntu
+            cd target/newrepo
             git pull
